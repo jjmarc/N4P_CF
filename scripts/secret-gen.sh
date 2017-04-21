@@ -2,7 +2,7 @@
 
 set -e
 
-export gopath=$(pwd)/gopath:$(pwd)/go/src/github.com/square/certstrap/Godeps/_workspace
+export GOPATH=$(pwd)/gopath:$(pwd)/go/src/github.com/square/certstrap/Godeps/_workspace
 cd go/src/github.com/square/certstrap/
 ls
 go build
