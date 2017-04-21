@@ -6,12 +6,17 @@ resources:
     username: {{git-user}}
     password: {{git-password}}
     uri: https://github.com/jjmarc/N4P_CF.git
+- name: resource-app
+  type: git
+  source:
+    uri: https://github.com/square/certstrap
 
 jobs: 
 - name: manifest-generation
   public: false
   plan: 
   - get: git-interne
+  - get: resource-app
     trigger: true
   - task: secret-gen
     file: git-interne/concourse/task-secret-gen.yml

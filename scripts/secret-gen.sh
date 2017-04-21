@@ -2,9 +2,9 @@
 
 set -e
 
-export gopath=$(pwd)/gopath:$(pwd)/gopath/src/test
-cd gopath/src/test/
+export gopath=$(pwd)/gopath:$(pwd)/gopath/src/github.com/square/certstrap/Godeps/_workspace
+cd gopath/src/github.com/square/certstrap/
 
-go get -v github.com/square/certstrap
+certstrap init --passphrase '' --common-name consulCA
 
 echo "fin test"
