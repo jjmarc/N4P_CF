@@ -8,7 +8,7 @@ export GOPATH=$(pwd)/go
 cd go/src/github.com/square/certstrap/
 go build
 export PATH=$PATH:$(pwd)/certstrap
-cd $(dir)/updated-git/
+cd ${dir}/updated-git/
 
 ./certstrap init --passphrase '' --common-name consulCA
 
