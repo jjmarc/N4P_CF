@@ -20,3 +20,5 @@ jobs:
     trigger: true
   - task: secret-gen
     file: git-interne/concourse/task-secret-gen.yml
+  - put: git-interne
+    params: {repository: updated-git}
